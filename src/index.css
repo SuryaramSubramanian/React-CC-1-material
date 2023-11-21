@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.flexBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: to center align items horizontally */
+  gap: 10px; 
+  justify-content: space-around
+}
