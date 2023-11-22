@@ -1,41 +1,58 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class SetTimeout extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             timer: 10,
             status: 'Start Game',
-        }
+            isPaused: true,
+        };
+        this.intervalId = null;
+        this.timeoutId = null;
     }
 
     resetGame = () => {
-        this.setState({ timer: 10, status: "Start Game" })
+        clearInterval(this.intervalId);
+        clearTimeout(this.timeoutId);
+        this.setState({ timer: 10, status: "Start Game", isPaused: true });
+    }
+
+    tick = () => {
+        this.setState(prevState => ({ timer: prevState.timer - 1 }));
     }
 
     execTimeout = () => {
-        const timer = setInterval(() => {
-            this.setState(prevState => {
-                return {
-                    timer: prevState.timer - 1
-                }
-            })
-        }, 1000);
+        if (!this.state.isPaused) return;
 
-        this.setState({status: "Started..."});
-        
-        setTimeout(() => {
+        this.setState({ status: "Started...", isPaused: false });
+        this.intervalId = setInterval(this.tick, 1000);
+
+        this.timeoutId = setTimeout(() => {
+            clearInterval(this.intervalId);
+            this.setState({ status: 'Game Timeout', isPaused: true, timer: 10 });
             alert('Game Timeout');
-            clearInterval(timer);
-        }, 10000);
+        }, this.state.timer * 1000);
     }
-  render() {
-    return (
-        <>
-        <button onClick={this.execTimeout}>{this.state.status}</button>
-        <button onClick={this.resetGame}>Reset</button>
-      <div>{this.state.timer}</div>
-      </>
-    )
-  }
+
+    pauseGame = () => {
+        if (this.state.isPaused) {
+            this.execTimeout();
+        } else {
+            clearInterval(this.intervalId);
+            clearTimeout(this.timeoutId);
+            this.setState({ status: "Paused", isPaused: true });
+        }
+    }
+
+    render() {
+        return (
+            <>
+                <button onClick={this.execTimeout}>{this.state.status}</button>
+                <button onClick={this.resetGame}>Reset</button>
+                <button onClick={this.pauseGame}>{this.state.isPaused ? 'Continue' : 'Pause'}</button>
+                <div>{this.state.timer}</div>
+            </>
+        );
+    }
 }
