@@ -18,7 +18,7 @@ export default class SetTimeout extends Component {
         this.setState({ timer: 10, status: "Start Game", isPaused: true });
     }
 
-    tick = () => {
+    counter = () => {
         this.setState(prevState => ({ timer: prevState.timer - 1 }));
     }
 
@@ -26,7 +26,7 @@ export default class SetTimeout extends Component {
         if (!this.state.isPaused) return;
 
         this.setState({ status: "Started...", isPaused: false });
-        this.intervalId = setInterval(this.tick, 1000);
+        this.intervalId = setInterval(this.counter, 1000);
 
         this.timeoutId = setTimeout(() => {
             clearInterval(this.intervalId);

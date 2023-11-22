@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import SetTimeout from './SetTimeout';
+import MyForm from './MyForm';
+import SimpleForm from './SimpleForm';
+
+// import SetTimeout from './SetTimeout';
 // import BasicButtons from './components/Button';
 // import Layout from './Layout';
 // <Layout>
@@ -11,10 +14,11 @@ import SetTimeout from './SetTimeout';
 //   <BasicButtons text="Click Me" variant="contained" size="small" color="secondary" font="25px"/>
 // </div>
 // </Layout>
+// <SetTimeout/>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-  <SetTimeout/>
+    <SimpleForm/>
   </div>
 );
