@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import MyForm from './MyForm';
-import SimpleForm from './SimpleForm';
-import BusinessTemplate from './BuisnessTemplate';
+import RadiumButton from './RadiumButton';
+import UserProfile from './Userprofile';
 // import App from './App';
 
 // import SetTimeout from './SetTimeout';
@@ -21,6 +21,8 @@ import BusinessTemplate from './BuisnessTemplate';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-    <BusinessTemplate/>
+    <RadiumButton text="Radium">Radium Button</RadiumButton>
+    <UserProfile name="John Doe" age={30} bio="Developer and tech enthusiast." />
+    <UserProfile name="Jane Smith" />
   </div>
 );
