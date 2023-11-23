@@ -4,16 +4,12 @@ import Sidebar from './components/Sidebar';
 import { Box } from '@mui/material';
 
 
-const Layout = ({ children }) => (
+const Layout = ({ testing }) => (
   <Box sx={{ display: 'flex' }}>
-  <Navbar />
-  <Sidebar />
-    
+    <Navbar />
+    <Sidebar />
     <Box component="main" sx={{ flexGrow: 1, p: 3, pt: 8 }}> 
-      {children}
-    </Box>
-    <Box component="main" sx={{ flexGrow: 1, p: 3, pt: 8 }}> 
-      {children}
+      {testing}
     </Box>
   </Box>
 );

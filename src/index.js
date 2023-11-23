@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import MyForm from './MyForm';
 import SimpleForm from './SimpleForm';
+import BusinessTemplate from './BuisnessTemplate';
 // import App from './App';
 
 // import SetTimeout from './SetTimeout';
@@ -20,6 +21,6 @@ import SimpleForm from './SimpleForm';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-    <SimpleForm/>
+    <BusinessTemplate/>
   </div>
 );
