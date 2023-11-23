@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import MyForm from './MyForm';
+// import MyForm from './MyForm';
 import SimpleForm from './SimpleForm';
+// import App from './App';
 
 // import SetTimeout from './SetTimeout';
 // import BasicButtons from './components/Button';

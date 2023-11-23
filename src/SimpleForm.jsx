@@ -2,14 +2,36 @@ import { Button, Card, CardActions, CardContent, Grid, TextField } from '@mui/ma
 import React, { Component } from 'react'
 
 export default class SimpleForm extends Component {
-    
+    constructor(props) {
+        super(props);
+        this.state = {
+            fullName: '',
+            email: '',
+            password: '',
+            confirmPassword: '',
+        };
+    }
+
+    handleFullname = (e) => {
+        this.setState({ fullName: e.target.value });
+    }
+
+    handleSubmit = (e) => {
+        if (this.state.fullName === ''){
+            alert('You must fill full name');
+        } else {
+            alert('Submission Success');
+        }
+    }
+
     render() {
     return (
+        <form onSubmit={this.handleSubmit}>
     <Card variant="outlined">
         <CardContent>
         <Grid container spacing={1}>
             <Grid item md={6} xs={12}>
-            <TextField variant="outlined" label="Full Name" type='text'/>
+            <TextField name="fullName" value={this.state.fullName} onChange={this.handleFullname} variant="outlined" label="Full Name" type='text'/>
             </Grid>
             <Grid item md={6} xs={12}>
             <TextField variant="outlined" label="Email Id" type='email'/>
@@ -28,6 +50,7 @@ export default class SimpleForm extends Component {
             <Button type="submit" size="small">Submit</Button>
         </CardActions>
     </Card>
+    </form>
     )
   }
 }
