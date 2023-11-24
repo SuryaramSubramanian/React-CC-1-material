@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import MyForm from './MyForm';
-import RadiumButton from './RadiumButton';
-import UserProfile from './Userprofile';
+// import RadiumButton from './RadiumButton';
+// import UserProfile from './Userprofile';
+import ErrorBoundary from './ErrorBoundary';
+import BuggyComponent from './BuggyComponent';
+import App from './App';
 // import App from './App';
 
 // import SetTimeout from './SetTimeout';
@@ -17,12 +20,15 @@ import UserProfile from './Userprofile';
 // </div>
 // </Layout>
 // <SetTimeout/>
+// <RadiumButton text="Radium">Radium Button</RadiumButton>
+// <UserProfile name="John Doe" age={30} bio="Developer and tech enthusiast." />
+// <UserProfile name="Jane Smith" />
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-    <RadiumButton text="Radium">Radium Button</RadiumButton>
-    <UserProfile name="John Doe" age={30} bio="Developer and tech enthusiast." />
-    <UserProfile name="Jane Smith" />
+  <ErrorBoundary>
+    <App/>
+  </ErrorBoundary>
   </div>
 );
