@@ -10,6 +10,7 @@ import './index.css';
 // import EnhancedComponent from './HocComponent';
 import ThemedMyComponent from './HocComponent';
 import SpreadOperator from './SpreadOperator';
+import App from './App';
 // import App from './App';
 
 // import SetTimeout from './SetTimeout';
@@ -30,6 +31,6 @@ import SpreadOperator from './SpreadOperator';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-  <SpreadOperator/>
+  <ThemedMyComponent name="SKCET"/>
   </div>
 );
