@@ -11,6 +11,7 @@ import './index.css';
 import ThemedMyComponent from './HocComponent';
 import SpreadOperator from './SpreadOperator';
 import App from './App';
+import Context from './Context';
 // import App from './App';
 
 // import SetTimeout from './SetTimeout';
@@ -31,6 +32,6 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-  <ThemedMyComponent name="SKCET"/>
+  <Context/>
   </div>
 );
