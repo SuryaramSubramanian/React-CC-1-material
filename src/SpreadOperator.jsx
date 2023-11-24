@@ -1,10 +1,13 @@
 import React from 'react';
 
 const DisplayPropsComponent = (props) => {
+    const Myprops = props;
   return (
     <div>
       <h2>Displaying Props</h2>
-      <pre>{JSON.stringify(props, null, 2)}</pre>
+      <pre>{Myprops.name}</pre>
+      <pre>{Myprops.age}</pre>
+      <pre>{Myprops.location}</pre>
     </div>
   );
 };

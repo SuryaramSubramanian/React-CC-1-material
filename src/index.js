@@ -4,9 +4,12 @@ import './index.css';
 // import MyForm from './MyForm';
 // import RadiumButton from './RadiumButton';
 // import UserProfile from './Userprofile';
-import ErrorBoundary from './ErrorBoundary';
-import BuggyComponent from './BuggyComponent';
-import App from './App';
+// import ErrorBoundary from './ErrorBoundary';
+// import BuggyComponent from './BuggyComponent';
+// import App from './App';
+// import EnhancedComponent from './HocComponent';
+import ThemedMyComponent from './HocComponent';
+import SpreadOperator from './SpreadOperator';
 // import App from './App';
 
 // import SetTimeout from './SetTimeout';
@@ -27,8 +30,6 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-  <ErrorBoundary>
-    <App/>
-  </ErrorBoundary>
+  <SpreadOperator/>
   </div>
 );
