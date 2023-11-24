@@ -12,6 +12,7 @@ import ThemedMyComponent from './HocComponent';
 import SpreadOperator from './SpreadOperator';
 import App from './App';
 import Context from './Context';
+import TimerComponent from './RefEffect';
 // import App from './App';
 
 // import SetTimeout from './SetTimeout';
@@ -32,6 +33,6 @@ import Context from './Context';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-  <Context/>
+  <TimerComponent/>
   </div>
 );
