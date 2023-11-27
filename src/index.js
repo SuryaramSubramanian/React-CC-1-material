@@ -8,11 +8,13 @@ import './index.css';
 // import BuggyComponent from './BuggyComponent';
 // import App from './App';
 // import EnhancedComponent from './HocComponent';
-import ThemedMyComponent from './HocComponent';
-import SpreadOperator from './SpreadOperator';
-import App from './App';
-import Context from './Context';
-import TimerComponent from './RefEffect';
+// import ThemedMyComponent from './HocComponent';
+// import SpreadOperator from './SpreadOperator';
+// import App from './App';
+// import Context from './Context';
+// import TimerComponent from './RefEffect';
+// import DataFetcher from './Axios';
+import CrudDemo from './CrudDemo';
 // import App from './App';
 
 // import SetTimeout from './SetTimeout';
@@ -33,6 +35,6 @@ import TimerComponent from './RefEffect';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-  <TimerComponent/>
+    <CrudDemo/>
   </div>
 );
