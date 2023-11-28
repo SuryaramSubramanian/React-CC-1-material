@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import App from './App';
 // import MyForm from './MyForm';
 // import RadiumButton from './RadiumButton';
 // import UserProfile from './Userprofile';
@@ -14,7 +15,7 @@ import './index.css';
 // import Context from './Context';
 // import TimerComponent from './RefEffect';
 // import DataFetcher from './Axios';
-import CrudDemo from './CrudDemo';
+// import CrudDemo from './CrudDemo';
 // import App from './App';
 
 // import SetTimeout from './SetTimeout';
@@ -35,6 +36,6 @@ import CrudDemo from './CrudDemo';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='flexBox'>
-    <CrudDemo/>
+  <App/>
   </div>
 );
